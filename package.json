@@ -5,12 +5,17 @@
     "scripts": {
         "format:check": "prettier --check ./Readme.md ./package.json ./tsconfig.json",
         "format:write": "prettier --write ./Readme.md ./package.json ./tsconfig.json",
-        "prepare": "husky install"
+        "prepare": "husky install",
+        "test": "jest",
+        "test:watch": "jest --watch"
     },
     "devDependencies": {
+        "@types/jest": "^29.5.2",
         "husky": "^8.0.3",
+        "jest": "^29.5.0",
         "lint-staged": "^13.2.3",
         "prettier": "^2.8.8",
+        "ts-jest": "^29.1.1",
         "typescript": "^5.1.6"
     },
     "lint-staged": {
