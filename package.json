@@ -4,9 +4,11 @@
     "license": "MIT",
     "scripts": {
         "format:check": "prettier --check ./Readme.md ./package.json",
-        "format:write": "prettier --write ./Readme.md ./package.json"
+        "format:write": "prettier --write ./Readme.md ./package.json",
+        "prepare": "husky install"
     },
     "devDependencies": {
+        "husky": "^8.0.3",
         "prettier": "^2.8.8"
     }
 }
