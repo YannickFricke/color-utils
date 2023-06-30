@@ -3,3 +3,4 @@
 
 yarn run format:check
 yarn run lint-staged
+yarn run test
