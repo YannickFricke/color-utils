@@ -3,8 +3,8 @@
     "version": "0.0.0",
     "license": "MIT",
     "scripts": {
-        "format:check": "prettier --check ./Readme.md ./package.json ./tsconfig.json",
-        "format:write": "prettier --write ./Readme.md ./package.json ./tsconfig.json",
+        "format:check": "prettier --check ./src ./Readme.md ./package.json ./tsconfig.json",
+        "format:write": "prettier --write ./src ./Readme.md ./package.json ./tsconfig.json",
         "prepare": "husky install",
         "test": "jest",
         "test:watch": "jest --watch"
