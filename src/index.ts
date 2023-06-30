@@ -2,3 +2,5 @@
 
 export { parseRGB } from './rgb';
 export { parseRGBA } from './rgba';
+
+export { ParsedRGB, ParsedRGBA, ParsedColor } from './types';
