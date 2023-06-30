@@ -11,7 +11,7 @@ import { InvalidValueError } from './errors';
  * @throws {InvalidValueError} - When the green value is < 0 or > 255
  * @throws {InvalidValueError} - When the blue value is < 0 or > 255
  * @throws {InvalidValueError} - When the alpha value is < 0 or > 1
- * @returns {ParsedRGB} The parsed RGBA values
+ * @returns {ParsedRGBA} The parsed RGBA values
  */
 export function parseRGBA(input: string): ParsedRGBA {
     const rgbaRegex =
