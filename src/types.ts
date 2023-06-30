@@ -18,3 +18,8 @@ export type ParsedRGBA = {
     blue: number;
     alpha: number;
 };
+
+/**
+ * A union type for every supported color
+ */
+export type ParsedColor = ParsedRGB | ParsedRGBA;
