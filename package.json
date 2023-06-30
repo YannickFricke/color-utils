@@ -1,7 +1,12 @@
 {
-  "name": "@yannickfricke/color-utils",
-  "version": "0.0.0",
-  "license": "MIT",
-  "scripts": {},
-  "devDependencies": {}
+    "name": "@yannickfricke/color-utils",
+    "version": "0.0.0",
+    "license": "MIT",
+    "scripts": {
+        "format:check": "prettier --check ./Readme.md ./package.json",
+        "format:write": "prettier --write ./Readme.md ./package.json"
+    },
+    "devDependencies": {
+        "prettier": "^2.8.8"
+    }
 }
