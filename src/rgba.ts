@@ -2,6 +2,19 @@ import { ParsedRGBA } from './types';
 import { isInRange } from './utils/isInRange';
 import { InvalidValueError } from './errors';
 
+const rgbaRegex =
+    /^\s*rgba\(\s*(?<red>\d{1,3})\s*,\s*(?<green>\d{1,3})\s*,\s*(?<blue>\d{1,3})\s*,\s*(?<alpha>(?:0(?:\.\d+)?|1(?:\.0+)?))\s*\)\s*$/;
+
+/**
+ * Checks if the given input matches the CSS RGBA color string
+ *
+ * @param {string} input - The input to check
+ * @returns {boolean} Returns true when the input matches the CSS RGBA color string. Otherwise false is returned.
+ */
+export function isRGBA(input: string): boolean {
+    return rgbaRegex.test(input);
+}
+
 /**
  * Tries to parse the given input string as CSS RGBA color
  *
@@ -14,9 +27,6 @@ import { InvalidValueError } from './errors';
  * @returns {ParsedRGBA} The parsed RGBA values
  */
 export function parseRGBA(input: string): ParsedRGBA {
-    const rgbaRegex =
-        /^\s*rgba\(\s*(?<red>\d{1,3})\s*,\s*(?<green>\d{1,3})\s*,\s*(?<blue>\d{1,3})\s*,\s*(?<alpha>(?:0(?:\.\d+)?|1(?:\.0+)?))\s*\)\s*$/;
-
     const matches = rgbaRegex.exec(input);
 
     if (matches === null) {

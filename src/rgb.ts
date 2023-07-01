@@ -2,6 +2,19 @@ import { InvalidValueError } from './errors';
 import { ParsedRGB } from './types';
 import { isInRange } from './utils/isInRange';
 
+const rgbRegex =
+    /^\s*rgb\(\s*(?<red>\d{1,3})\s*,\s*(?<green>\d{1,3})\s*,\s*(?<blue>\d{1,3})\s*\)\s*$/;
+
+/**
+ * Checks if the given input is a valid CSS RGB color string
+ *
+ * @param {string} input - The input to check
+ * @returns {boolean} Returns true when the input matches the CSS RGB color string
+ */
+export function isRGB(input: string): boolean {
+    return rgbRegex.test(input);
+}
+
 /**
  * Tries to parse the given input string as CSS RGB color
  *
@@ -13,9 +26,6 @@ import { isInRange } from './utils/isInRange';
  * @returns {ParsedRGB} The parsed RGB values
  */
 export function parseRGB(input: string): ParsedRGB {
-    const rgbRegex =
-        /^\s*rgb\(\s*(?<red>\d{1,3})\s*,\s*(?<green>\d{1,3})\s*,\s*(?<blue>\d{1,3})\s*\)\s*$/;
-
     const matches = rgbRegex.exec(input);
 
     if (matches === null) {
